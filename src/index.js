@@ -34,11 +34,10 @@ async function onSearch(e) {
     refs.gallery.innerHTML = cardTmp(pictures);
     if (pictures.length > 11) {
       refs.loadMore.style.visibility = "visible";
-	}
-	  if (!pictures.length) {
-		  console.log("Nothing find😒");
-		  
-	  }
+    }
+    if (!pictures.length) {
+      console.log("Nothing find😒");
+    }
   } catch (error) {
     console.log(error.message);
   }
@@ -54,10 +53,10 @@ async function onLoadMore() {
     const observer = new IntersectionObserver(onLoadMore, options);
     observer.observe(refs.loadMore);
   }
-//   refs.gallery.scrollIntoView({
-//     behavior: "smooth",
-//     block: "end",
-//   });
+  //   refs.gallery.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "end",
+  //   });
 }
 
 // =====Light BOx
